@@ -1,0 +1,24 @@
+git init -create repository
+What happens when you initialize a repository? Why do you need to do it?
+when we initialize repository it creates .git file. but it doesn't do commit. it doesn't track any files. we have to manually do first commit and add files to tracking list.
+git status : status of git repository
+git add: add files to be tracked to staging area.
+If you accidentally add a file to the staging area, you can remove it using git reset.
+
+Concept Map: init, add, staging area
+We’ve introduced a few new concepts since we last revisited our concept map.
+git init
+git add
+git status
+staging area
+working directory
+
+How is the staging area different from the working directory and the repository? What value do you think it offers?
+working directory contain all files, repository have track of all commited files.
+staging area is used to specifying exactly what chnages to be commited
+
+If you use an issue tracker, put references to them at the bottom,
+like this:
+
+Resolves: #123
+See also: #456, #789
