@@ -1,0 +1,40 @@
+to compare two file use "FC" commmand (windows). In mac and linux system use "diff" command.
+when we compare two code files, this will give only those shorts of code which are different in two files. with this we can check for any unwanted change in code. If code was running previously and after few changes its not giving output. then we can fix it by comparing.
+
+how could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+with easy access to history we can track all changes in code. when something goes wrong, we can open old file for reference. in long term we don't need to remember changes we made in code.
+
+What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google docs does?
+manual commit allows programmer to save changes only when significant chnge is done and we are done with changing that part completly.
+auto-save may save intermediate codes which an be incomplete, incomprehensible and difficult to understand.
+if we are trying new technique in code (expermenting) and if code doesn't work we will go back to previous version. in auto-save, it will also save versions while experimenting, this can be confusing.
+in commit, we can add comments to explain changes made. we commit when related changes are done together. hence commit will be easier to understand.
+
+Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
+In git code files are inter-related. hence for some changes in one file, all files may get affected. therefore git allows saving multiple files in one commit. 
+If files are not interrelated then, saving multipe files in one commit will cause unnecessary saving of same versions of files.
+
+How can you use the commands git log and git diff to view the history of files?
+with git log command we can view all versions(commit) of code their time and comments. its concise log with relevant helpful information.
+with git diff command we can compare two commits, we can see which lines are added and which are removed.
+
+Git Errors and Warnings Solution
+
+Should not be doing an octopus 
+Octopus is a strategy Git uses to combine many different versions of code together. This message can appear if you try to use this strategy in an inappropriate situation.
+
+You are in 'detached HEAD' state 
+HEAD is what Git calls the commit you are currently on. You can “detach” the HEAD by switching to a previous commit, which we’ll see in the next video. Despite what it sounds like, it’s actually not a bad thing to detach the HEAD. Git just warns you so that you’ll realize you’re doing it.
+
+Panic! (the 'impossible' happened) 
+This is a real error message, but it’s not output by Git. Instead it’s output by GHC, the compiler for a programming language called Haskell. It’s reserved for particularly surprising errors!
+
+Takeaway We hope these errors and warnings amused you as much as they amused us! Now that you know what kind of errors Git can throw, you’re ready to start checking out previous versions of files with Caroline.
+
+now that you have your workspace set up, what do you want to try using Git for?
+to maintain code for application and software i write
+
+git diff previous_commit_id new_commit_id
+git log
+git checkout
+git clone
