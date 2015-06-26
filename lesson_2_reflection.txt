@@ -17,8 +17,15 @@ How is the staging area different from the working directory and the repository?
 working directory contain all files, repository have track of all commited files.
 staging area is used to specifying exactly what chnages to be commited
 
-If you use an issue tracker, put references to them at the bottom,
+If you use an issue tracker, put references to them at the bottom,y 
 like this:
-
 Resolves: #123
 See also: #456, #789
+
+git diff (with no argument) : compares working directory and staging area
+git diff --staged : comares satging area with latest commit
+git reset -- hard : its hard reset, where working directory is reset to latest commit
+
+How can you use the staging area to make sure you have one commit per logical change?
+by using git diff --staged, we can ensure that we have one commit per logical change. (not sure if this is sufficient answer)
+

@@ -38,3 +38,13 @@ git diff previous_commit_id new_commit_id
 git log
 git checkout
 git clone
+
+git checkout master : to return to latest commit
+
+Working directory--------------------Staging area------------------------------repository
+How might using version control make you more confident to make changes that could break something?
+we can easily go back to earlier commit.
+
+while setting up sublime use: 
+alias subl="C:/Program\ Files\ \(x86\)/Sublime\ Text\ 2/sublime_text.exe"
+for change in bash_profile file
