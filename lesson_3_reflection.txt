@@ -2,8 +2,65 @@
 +git remote add <name> <link url> : create remote
 +git remote -v : to check if remote is created
 +git push <remote name> <branch name> : to push data from PC to remote server.
++git pull <remote name> <branch name> : to pull data to PC from remote server.
 
 1.When would you want to use a remote repository rather than keeping all your work local?
 --To collabrate, in group project. so everyone is updated about progress.
 --when multiple machines are used for working
 --to have backup
+
+2.Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
+-- if it is group project, i don't want content on my machine or work done by me on machine getting automatically over-written.
+
+3.Describe the differences between forks, clones, and branches. When would you use one instead of another?
+fork creates online clone on server. but with fork we can refer back to parent repository.
+clone is exact copy of complete repository. 
+branch is name given to series of commits. 
+//
+    Branches are labels given to chain of commits with each commit only referencing its parent commit. 
+    Branches can be used to test out a new experimental feature or to fix a bug within a repository.
+    Clones are exact copies of a remote or even a local repository in a newly created local respository 
+    with the history of the commits and realted files. Clones are used to create dulicates of remote 
+    files on a local computer and thus enable us to work on them locally.
+    Forks are clones of someone else's project on remote repository onto our own remote repository with 
+    attribution linking. Forks are used to quickly make clones on a remote repository and enable us to 
+    work on a project on our own or even contribute to the project/
+//
+
++ when our remote version is edited and also local version edited then they are out of sync.
++ git fetch will fetch remote version and create that branch
++ we can then merge it with local branch. git fetch allow you to examine changes on your local machine before merging.
++or instead use git pull which will do both fetch and merge
++
++ Fast forward merge : while merging two commits, if one of them is reachable by other then this "merge action" is going to +create that same "other" commit.
+
+4.What is the benefit of having a copy of the last known state of the remote stored locally?
+-- it helps in syncing two files. if both versions i.e. local and remote are modified, then when we pull or push , git will merge according to the last known state of the remote stored locally.
+The benefit of having a copy of the last known state is it allows you to work offline for a longer period of time while working on add features to the latest code base.
+//
+   With the last known state of the remote stored locally, after a certain number of changes and 
+    modifications commited locally we can find out with git status how far ahead of the remote head 
+    is our local branch head. Also, when running fetch given new independent commits to remote branch 
+    we can find out if the current local branch is in-sync or out-of-sync with remote branch and 
+    approriately run git merge to get a combined output.
+//
+
++ making pull request (important)
+
+5.How would you collaborate without using Git or GitHub? What would be easier, and what would be harder?
+-- 
+//
+    If it were documents, spreadsheets, text files, and presentation, I would have used google drive and 
+    docs. This would have enabled me to concurently work with my collaborator on a single file at the same 
+    time, see revision history, comments, annotation, etc. This would reduced the overhead with committing, 
+    pushing and pulling changes manually and also the apparent lack of real-time collaboration. But on the 
+    other hand if it were code (or better yet project with multiple code files and all), we would be using 
+    dropbox, GDrive or similar and version each code file by chaning the file name. This would have a 
+    compounded complexity very quickly, and the changes and bugs would be very tedious to keep track of. 
+//
+When would you want to make changes in a separate branch rather than directly in master? What benefits does each approach have?
+when we mwke experimental changes, we can use seprate branch so that master branch always have working solution.
+if its group project, then other members may be experimenting/making changes simultaneously. hence its good idea they work on different branches and merge afterward as needed.
+//
+You could make your changes directly to the master branch in your fork, but when contributing to a public repository, it’s standard practice to make the changes in a non-master branch within the fork. This way, you can easily keep your master branch up-to-date with master of the original repository, and merge changes from master into your branch when you are ready.
+//
