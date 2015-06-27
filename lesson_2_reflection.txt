@@ -15,6 +15,7 @@ working directory
 
 How is the staging area different from the working directory and the repository? What value do you think it offers?
 working directory contain all files, repository have track of all commited files.
+
 staging area is used to specifying exactly what chnages to be commited
 
 If you use an issue tracker, put references to them at the bottom,y 
@@ -29,3 +30,33 @@ git reset -- hard : its hard reset, where working directory is reset to latest c
 How can you use the staging area to make sure you have one commit per logical change?
 by using git diff --staged, we can ensure that we have one commit per logical change. (not sure if this is sufficient answer)
 
+Branches
+
+git branch (no argument) :shows all branches
+git branch --name-- : creates branch with that name
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+-when we are expermenting with code
+-different language code
+-create different products based on same base product
+-different piece of work, feature,bug
+-master branch production quality , development branch, expermentation branch
+-compartmentalise 
+
+git log --graph --oneline ________ __________ : this will give you graph of two branches.
+
+git checkout -b new_branch_name : create and checkout branch
+
+How do the diagrams help you visualize the branch structure?
+it gives complete idea of structure in one glance
+
+git show:diff between commit and its 
+
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+merge commit have two parents
+
+git branch -d coins : delete branch name "coins"
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+automatic merging code may get repeated, code or function which are not related get included unnecessaryly. increases size of code.
+manually we have to look at every line of code.tedious
