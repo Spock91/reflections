@@ -1,0 +1,9 @@
++git remote : this command will tell if this branch have remote.
++git remote add <name> <link url> : create remote
++git remote -v : to check if remote is created
++git push <remote name> <branch name> : to push data from PC to remote server.
+
+1.When would you want to use a remote repository rather than keeping all your work local?
+--To collabrate, in group project. so everyone is updated about progress.
+--when multiple machines are used for working
+--to have backup
